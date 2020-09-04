@@ -10,7 +10,7 @@ typedef unsigned long long ull;
 typedef long long ll;
 using namespace std;
 #define N 100005
-int dp[10001][10001];
+bool dp[10001][10001];
 
 
 void solve()
