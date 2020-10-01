@@ -90,7 +90,7 @@ int main(){
     g = (graph *)malloc(sizeof(graph));
     g = adj_mat();
     printf("\n\n");
-    printf("Crossponding Adj. Matrix:\n");
+    printf("Coressponding Adj. Matrix:\n");
     for(i = 0;i<g->V;i++)
     {
         for(j = 0;j<g->V;j++)
