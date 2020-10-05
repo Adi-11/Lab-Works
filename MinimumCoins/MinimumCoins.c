@@ -24,12 +24,11 @@ int main(){
         i--;        
     }
 
-    printf("\n\nCoin value : Number of coins\n");
+    printf("\nCoin value : Number of coins\n");
     for(int i =9;i>=0;i--){
         if(num[i]>0){
-            printf("%d  :    %d\n",coins[i], num[i]);
+            printf("%d : %d\n",coins[i], num[i]);
         }
     }
-    printf("\n---------------------------------------\n\n");
     return 0;
 }
