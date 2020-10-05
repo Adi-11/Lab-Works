@@ -1,7 +1,13 @@
 #include <bits/stdc++.h>
 #include <iostream>
-#define fastio ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
-#define test int t; cin >> t; while (t--)
+#define fastio                    \
+    ios_base::sync_with_stdio(0); \
+    cin.tie(0);                   \
+    cout.tie(0)
+#define test  \
+    int t;    \
+    cin >> t; \
+    while (t--)
 #define endl '\n'
 #define pb push_back
 #define mp make_pair
@@ -24,16 +30,17 @@ void solve()
 
     memset(dp, 0, sizeof(dp));
 
-    for (int i = 1; i < n + 1; i++) {
-        for (int j = 1; j < max_wt + 1; j++) {
-            if (wt[i - 1] <= max_wt)
+    for (int i = 1; i < n + 1; i++)
+    {
+        for (int j = 1; j < max_wt + 1; j++)
+        {
+            if (wt[i - 1] <= j)
                 dp[i][j] = max(val[i - 1] + dp[i - 1][j - wt[i - 1]], dp[i - 1][j]);
             else
                 dp[i][j] = dp[i - 1][j];
         }
     }
     cout << dp[n][max_wt];
-
 }
 int main()
 {
@@ -41,7 +48,7 @@ int main()
     test
     {
         solve();
-    cout << endl;
+        cout << endl;
     }
     return 0;
 }
